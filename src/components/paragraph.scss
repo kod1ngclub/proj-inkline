@@ -1,0 +1,7 @@
+@import "../shared/util.scss";
+
+.paragraph {
+    @include inherit();
+
+    line-height: normal;
+}
