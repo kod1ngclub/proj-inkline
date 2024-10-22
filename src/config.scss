@@ -1,0 +1,14 @@
+$color-light: white;
+$color-dark: black;
+$color-text: rgb(83, 83, 83);
+$color-shadow: gray;
+
+$font-family: 'Courier New', Courier, monospace;
+$font-size: 1rem;
+
+$spacing-size: 1rem;
+
+$screen-tablet: 1000px;
+$screen-mobile: 250px;
+/* should define @media about $screen-tablet first
+   then define about $screen-mobile */
