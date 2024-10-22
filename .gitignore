@@ -1,4 +1,14 @@
+# css byproduct
 .sass-cache/
 *.css.map
 *.sass.map
 *.scss.map
+
+# build files
+build
+
+# project byproduct
+todo.txt
+todo
+
+# vscode settings
