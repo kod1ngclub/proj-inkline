@@ -1,0 +1,36 @@
+@import "../shared/func/grid.scss";
+
+$div-desktop: 4;
+$div-tablet: 2;
+$div-mobile: 1;
+
+@for $g from 1 through 3 {
+    .grid--g#{$g} {
+        @include gridset(
+            $div: $div-desktop,
+            $gap: ($g * $spacing-size)
+        );
+    }
+}
+
+@media screen and (max-width: $screen-tablet) {
+    @for $g from 1 through 3 {
+        .grid--g#{$g} {
+            @include gridset(
+                $div: $div-tablet,
+                $gap: ($g * $spacing-size)
+            );
+        }
+    }
+}
+
+@media screen and (max-width: $screen-mobile) {
+    @for $g from 1 through 3 {
+        .grid--g#{$g} {
+            @include gridset(
+                $div: $div-mobile,
+                $gap: ($g * $spacing-size)
+            );
+        }
+    }
+}

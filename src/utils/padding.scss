@@ -1,0 +1,33 @@
+@import "../config.scss";
+
+@for $i from 1 through 3 {
+    .p-#{$i} {
+        padding: $spacing-size * $i;
+    }
+    
+    .pt-#{$i} {
+        padding-top: $spacing-size * $i;
+    }
+    
+    .pb-#{$i} {
+        padding-bottom: $spacing-size * $i;
+    }
+    
+    .pl-#{$i} {
+        padding-left: $spacing-size * $i;
+    }
+    
+    .pr-#{$i} {
+        padding-right: $spacing-size * $i;
+    }
+    
+    .py-#{$i} {
+        padding-top: $spacing-size * $i;
+        padding-bottom: $spacing-size * $i;
+    }
+    
+    .px-#{$i} {
+        padding-left: $spacing-size * $i;
+        padding-right: $spacing-size * $i;
+    }
+}

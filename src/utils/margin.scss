@@ -1,0 +1,37 @@
+@import "../config.scss";
+
+@for $i from 1 through 3 {
+    .m-#{$i} {
+        margin: $spacing-size * $i;
+    }
+    
+    .mt-#{$i} {
+        margin-top: $spacing-size * $i;
+    }
+    
+    .mb-#{$i} {
+        margin-bottom: $spacing-size * $i;
+    }
+    
+    .ml-#{$i} {
+        margin-left: $spacing-size * $i;
+    }
+    
+    .mr-#{$i} {
+        margin-right: $spacing-size * $i;
+    }
+    
+    .my-#{$i} {
+        margin-top: $spacing-size * $i;
+        margin-bottom: $spacing-size * $i;
+    }
+    
+    .mx-#{$i} {
+        margin-left: $spacing-size * $i;
+        margin-right: $spacing-size * $i;
+    }
+}
+
+.m-auto {
+    margin: auto;
+}

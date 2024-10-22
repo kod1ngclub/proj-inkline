@@ -1,0 +1,26 @@
+@import "../shared/func/flex.scss";
+
+$directions: (
+    r: row,
+    c: column
+);
+
+$justifyings: (
+    st: flex-start,
+    sb: space-between,
+    c: center
+);
+
+@each $d, $dname in $directions {
+    @each $j, $jname in $justifyings {
+        @for $g from 1 through 3 {
+            .flex--#{$d}-#{$j}-g#{$g} {
+                @include flexset(
+                    $direction: $dname,
+                    $justify: $jname,
+                    $gap: ($g * $spacing-size)
+                );
+            }
+        }
+    }
+}

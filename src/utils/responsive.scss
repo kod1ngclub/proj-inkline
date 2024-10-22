@@ -1,0 +1,18 @@
+@import "../config.scss";
+
+.responsive {
+    width: 65%;
+    margin: auto;
+}
+
+@media screen and (max-width: $screen-tablet) {
+    .responsive {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: $screen-mobile) {
+    .responsive {
+        width: 95%;
+    }
+}
