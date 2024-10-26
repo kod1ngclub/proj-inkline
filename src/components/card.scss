@@ -22,10 +22,21 @@
 }
 
 .card__title {
-    font-weight: bold;
-    font-size: $font-size * 1.5;
+    @include baseset(
+        $fore: inherit,
+        $back: inherit,
+        $fontsize: $font-size * 1.5
+    );
+
+    font-weight: bold;    
 }
 
 .card__content {
+    @include baseset(
+        $fore: inherit,
+        $back: inherit,
+        $fontsize: $font-size
+    );
+
     margin-top: $spacing-size;
 }

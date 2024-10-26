@@ -1,10 +1,11 @@
-@import "../shared/func/color.scss";
+@import "../shared/util.scss";
 @import "../config.scss";
 
 .hashtag {
-    @include colorset(
+    @include baseset(
         $fore: $color-dark,
-        $back: inherit
+        $back: inherit,
+        $fontsize: inherit
     );
 
     text-decoration: none;

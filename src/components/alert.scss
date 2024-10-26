@@ -1,7 +1,13 @@
-@import "../shared/func/color.scss";
+@import "../shared/util.scss";
 @import "../config.scss";
 
 .alert {
+    @include baseset(
+        $fore: $color-text,
+        $back: $color-light,
+        $fontsize: $font-size
+    );
+
     // space between altert line and content
     padding-left: $spacing-size;
 
