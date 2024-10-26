@@ -22,7 +22,7 @@ $ sass src/index.scss build/inkline.min.css --style=compressed
 Alternatively, you can use CDN link in your head tag.
 
 ```html
-<link rel="stylesheet" href="#" />
+<link rel="stylesheet" href="https://proj-inkline.vercel.app/inkline.min.css" />
 ```
 
 ## Document
