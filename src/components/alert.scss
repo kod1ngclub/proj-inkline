@@ -1,0 +1,12 @@
+@import "../shared/func/color.scss";
+@import "../config.scss";
+
+.alert {
+    // space between altert line and content
+    padding-left: $spacing-size;
+
+    // border at the left of content (alert line)
+    border-left-width: $font-size/2;
+    border-left-color: $color-shadow;
+    border-left-style: solid;
+}
