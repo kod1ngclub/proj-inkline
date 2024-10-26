@@ -1,0 +1,12 @@
+@import "../shared/func/color.scss";
+@import "../config.scss";
+
+.hashtag {
+    @include colorset(
+        $fore: $color-dark,
+        $back: inherit
+    );
+
+    text-decoration: none;
+    &::before { content: '#'; }
+}
