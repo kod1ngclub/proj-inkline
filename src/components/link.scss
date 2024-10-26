@@ -1,0 +1,26 @@
+@import "../shared/func/color.scss";
+@import "../config.scss";
+
+.link {
+    @include colorset(
+        $fore: $color-text,
+        $back: inherit
+    );
+    text-decoration: none;
+}
+
+
+.link:hover {
+    @include colorset(
+        $fore: $color-text,
+        $back: inherit
+    );
+    text-decoration: underline;
+}
+
+.link:active {
+    @include colorset(
+        $fore: $color-dark,
+        $back: inherit
+    );
+}
