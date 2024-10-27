@@ -1,13 +1,17 @@
-$color-light: white;
-$color-dark: black;
 $color-text: rgb(83, 83, 83);
-$color-shadow: whitesmoke;
+$color-text-impact: black;
+$color-background: white;
+$color-background-impact: whitesmoke;
 
 $font-family: 'Courier New', Courier, monospace;
-$font-size: 1rem;
+$font-size-text: 1rem;
+$font-size-h1: 1rem;
+$font-size-h2: 1rem;
+$font-size-h3: 1rem;
 
-$spacing-size: 2rem;
-$spacing-radius: 7px;
+$spacing-padding-unit: 0.5rem;
+$spacing-margin-unit: 0.5rem;
+$spacing-gap-unit: 1rem;
 
 $screen-tablet: 1000px;
 $screen-mobile: 250px;
