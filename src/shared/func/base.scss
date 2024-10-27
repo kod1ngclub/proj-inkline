@@ -1,0 +1,8 @@
+@mixin baseset($fore, $back, $fontsize) {
+    // color
+    color: $fore;
+    background-color: $back;
+
+    // font size
+    font-size: $fontsize;
+}

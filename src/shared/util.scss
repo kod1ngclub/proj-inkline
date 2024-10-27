@@ -1,47 +1,22 @@
+@import "func/base.scss";
 @import "../config.scss";
 
 $DEFAULT_FOREGROUND_COLOR: $color-text;
-$DEFAULT_BACKGROUND_COLOR: $color-light;
-$DEFAULT_FONT_SIZE: 1rem;
-
-$BASESET_DEFAULT_TOKEN: "default";
+$DEFAULT_BACKGROUND_COLOR: $color-background;
+$DEFAULT_FONT_SIZE: $font-size-text;
 
 @mixin default() {
-    // color
-    color: $DEFAULT_FOREGROUND_COLOR;
-    background-color: $DEFAULT_BACKGROUND_COLOR;
-
-    // font size
-    font-size: $DEFAULT_FONT_SIZE;
+    @include baseset(
+        $fore: $DEFAULT_FOREGROUND_COLOR,
+        $back: $DEFAULT_BACKGROUND_COLOR,
+        $fontsize: $DEFAULT_FONT_SIZE
+    );
 }
 
 @mixin inherit() {
-    // color
-    color: inherit;
-    background-color: inherit;
-
-    // font size
-    font-size: inherit;
-}
-
-@mixin baseset($fore, $back, $fontsize) {
-    // color
-    @if ($fore == $BASESET_DEFAULT_TOKEN) {
-        color: $DEFAULT_FOREGROUND_COLOR;
-    } @else {
-        color: $fore;
-    }
-
-    @if ($back == $BASESET_DEFAULT_TOKEN) {
-        background-color: $DEFAULT_BACKGROUND_COLOR;
-    } @else {
-        background-color: $back;
-    }
-
-    // font size
-    @if ($fontsize == $BASESET_DEFAULT_TOKEN) {
-        font-size: $DEFAULT_FONT_SIZE;
-    } @else {
-        font-size: $fontsize;
-    }
+    @include baseset(
+        $fore: inherit,
+        $back: inherit,
+        $fontsize: inherit
+    );
 }
