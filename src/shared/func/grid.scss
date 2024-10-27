@@ -1,9 +1,17 @@
-@mixin gridset($div, $gap) {
+@mixin gridset($div, $j-item, $a-item, $j-content, $a-content, $gap) {
     display: grid;
 
+    // division set
     grid-template-columns: repeat($div, 1fr);
-    place-items: center;
-    justify-content: space-between;
+
+    // item strategy
+    justify-items: $j-item;
+    align-items: $a-item;
+
+    // content strategy
+    justify-content: $j-content;
+    align-items: $a-content;
     
+    // gap
     gap: $gap;
 }
