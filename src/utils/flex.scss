@@ -1,26 +1,38 @@
 @import "../shared/func/flex.scss";
 
-$directions: (
+$FLEX_OPTIONS_DIRECTIONS: (
     r: row,
     c: column
 );
 
-$justifyings: (
+$FLEX_OPTIONS_JUSTIFY_CONTENT: (
     st: flex-start,
     sb: space-between,
     c: center
 );
 
-@each $d, $dname in $directions {
-    @each $j, $jname in $justifyings {
-        @for $g from 1 through 3 {
-            .flex--#{$d}-#{$j}-g#{$g} {
+$FLEX_OPTIONS_ALIGN_ITEMS: (
+    fs: flex-start,
+    strh: stretch,
+    c: center
+);
+
+@each $d, $dname in $FLEX_OPTIONS_DIRECTIONS {
+    @each $j, $jname in $FLEX_OPTIONS_JUSTIFY_CONTENT {
+        @each $a, $aname in $FLEX_OPTIONS_ALIGN_ITEMS {
+            .flex--#{$d}-#{$j}-#{$a} {
                 @include flexset(
                     $direction: $dname,
                     $justify: $jname,
-                    $gap: ($g * $spacing-size)
+                    $align: $aname,
+                    $gap: $spacing-gap-unit
                 );
             }
         }
     }
 }
+
+/*
+ * how to use flex
+ * flex--(direction)-(justifiying)-(align)
+ */

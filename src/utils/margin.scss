@@ -2,33 +2,33 @@
 
 @for $i from 1 through 3 {
     .m-#{$i} {
-        margin: $spacing-size * $i;
+        margin: $spacing-margin-unit * $i;
     }
     
     .mt-#{$i} {
-        margin-top: $spacing-size * $i;
+        margin-top: $spacing-margin-unit * $i;
     }
     
     .mb-#{$i} {
-        margin-bottom: $spacing-size * $i;
+        margin-bottom: $spacing-margin-unit * $i;
     }
     
     .ml-#{$i} {
-        margin-left: $spacing-size * $i;
+        margin-left: $spacing-margin-unit * $i;
     }
     
     .mr-#{$i} {
-        margin-right: $spacing-size * $i;
+        margin-right: $spacing-margin-unit * $i;
     }
     
     .my-#{$i} {
-        margin-top: $spacing-size * $i;
-        margin-bottom: $spacing-size * $i;
+        margin-top: $spacing-margin-unit * $i;
+        margin-bottom: $spacing-margin-unit * $i;
     }
     
     .mx-#{$i} {
-        margin-left: $spacing-size * $i;
-        margin-right: $spacing-size * $i;
+        margin-left: $spacing-margin-unit * $i;
+        margin-right: $spacing-margin-unit * $i;
     }
 }
 

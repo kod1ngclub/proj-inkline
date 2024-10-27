@@ -1,36 +1,87 @@
 @import "../shared/func/grid.scss";
 
-$div-desktop: 4;
-$div-tablet: 2;
-$div-mobile: 1;
+$GRID_DIV_DESKTOP: 4;
+$GRID_DIV_TABLET: 2;
+$GRID_DIV_MOBILE: 1;
 
-@for $g from 1 through 3 {
-    .grid--g#{$g} {
-        @include gridset(
-            $div: $div-desktop,
-            $gap: ($g * $spacing-size)
-        );
+$GRID_OPTIONS_JUSTIFY_ITEMS: (
+    strh: stretch,
+    c: center
+);
+
+$GRID_OPTIONS_ALIGN_ITEMS: (
+    strh: stretch,
+    st: start
+);
+
+$GRID_OPTIONS_JUSTIFY_CONTENT: (
+    strh: stretch,
+    c: center,
+    sb: space-between
+);
+
+$GRID_OPTIONS_ALIGN_CONTENT: (
+    strh: stretch,
+    st: start
+);
+
+@each $ji, $jiname in $GRID_OPTIONS_JUSTIFY_ITEMS {
+    @each $ai, $ainame in $GRID_OPTIONS_ALIGN_ITEMS {
+        @each $jc, $jcname in $GRID_OPTIONS_JUSTIFY_CONTENT {
+            @each $ac, $acname in $GRID_OPTIONS_ALIGN_CONTENT {
+                .grid--#{$ji}-#{$ai}-#{$jc}-#{$ac} {
+                    @include gridset(
+                        $div: $GRID_DIV_DESKTOP,
+                        $j-item: $jiname,
+                        $a-item: $ainame,
+                        $j-content: $jcname,
+                        $a-content: $acname,
+                        $gap: $spacing-gap-unit,
+                    );
+                }
+            }
+        }
     }
 }
 
 @media screen and (max-width: $screen-tablet) {
-    @for $g from 1 through 3 {
-        .grid--g#{$g} {
-            @include gridset(
-                $div: $div-tablet,
-                $gap: ($g * $spacing-size)
-            );
+    @each $ji, $jiname in $GRID_OPTIONS_JUSTIFY_ITEMS {
+        @each $ai, $ainame in $GRID_OPTIONS_ALIGN_ITEMS {
+            @each $jc, $jcname in $GRID_OPTIONS_JUSTIFY_CONTENT {
+                @each $ac, $acname in $GRID_OPTIONS_ALIGN_CONTENT {
+                    .grid--#{$ji}-#{$ai}-#{$jc}-#{$ac} {
+                        @include gridset(
+                            $div: $GRID_DIV_TABLET,
+                            $j-item: $jiname,
+                            $a-item: $ainame,
+                            $j-content: $jcname,
+                            $a-content: $acname,
+                            $gap: $spacing-gap-unit,
+                        );
+                    }
+                }
+            }
         }
     }
 }
 
 @media screen and (max-width: $screen-mobile) {
-    @for $g from 1 through 3 {
-        .grid--g#{$g} {
-            @include gridset(
-                $div: $div-mobile,
-                $gap: ($g * $spacing-size)
-            );
+    @each $ji, $jiname in $GRID_OPTIONS_JUSTIFY_ITEMS {
+        @each $ai, $ainame in $GRID_OPTIONS_ALIGN_ITEMS {
+            @each $jc, $jcname in $GRID_OPTIONS_JUSTIFY_CONTENT {
+                @each $ac, $acname in $GRID_OPTIONS_ALIGN_CONTENT {
+                    .grid--#{$ji}-#{$ai}-#{$jc}-#{$ac} {
+                        @include gridset(
+                            $div: $GRID_DIV_MOBILE,
+                            $j-item: $jiname,
+                            $a-item: $ainame,
+                            $j-content: $jcname,
+                            $a-content: $acname,
+                            $gap: $spacing-gap-unit,
+                        );
+                    }
+                }
+            }
         }
     }
 }

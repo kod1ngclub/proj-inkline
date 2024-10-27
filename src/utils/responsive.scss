@@ -1,18 +1,21 @@
 @import "../config.scss";
 
+$RESPONSIVE_DESKTOP_SIZE: 65%;
+$RESPONSIVE_MOBILE_SIZE: 95%;
+
 .responsive {
-    width: 65%;
+    width: $RESPONSIVE_DESKTOP_SIZE;
     margin: auto;
 }
 
 @media screen and (max-width: $screen-tablet) {
     .responsive {
-        width: 95%;
+        width: $RESPONSIVE_MOBILE_SIZE;
     }
 }
 
 @media screen and (max-width: $screen-mobile) {
     .responsive {
-        width: 95%;
+        width: $RESPONSIVE_MOBILE_SIZE;
     }
 }
