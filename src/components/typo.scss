@@ -1,11 +1,12 @@
+@import "../shared/func/base.scss";
 @import "../shared/func/color.scss";
 @import "../config.scss";
 
 .typo1 {
     @include baseset(
-        $fore: $color-dark,
+        $fore: $color-text-impact,
         $back: inherit,
-        $fontsize: $font-size * 2.5
+        $fontsize: $font-size-h1
     );
 
     font-weight: bold;
@@ -13,9 +14,9 @@
 
 .typo2 {
     @include baseset(
-        $fore: $color-dark,
+        $fore: $color-text-impact,
         $back: inherit,
-        $fontsize: $font-size * 2
+        $fontsize: $font-size-h2
     );
 
     font-weight: bold;
@@ -23,9 +24,9 @@
 
 .typo3 {
     @include baseset(
-        $fore: $color-dark,
+        $fore: $color-text-impact,
         $back: inherit,
-        $fontsize: $font-size * 1.6
+        $fontsize: $font-size-h3
     );
 
     font-weight: bold;

@@ -4,7 +4,7 @@
 .card {
     @include colorset(
         $fore: $color-text,
-        $back: $color-light
+        $back: $color-background
     );
 
     border: 2px $color-text solid;
@@ -13,7 +13,7 @@
 .card--borderless {
     @include colorset(
         $fore: $color-text,
-        $back: $color-light
+        $back: $color-background
     );
 }
 
@@ -25,7 +25,7 @@
     @include baseset(
         $fore: inherit,
         $back: inherit,
-        $fontsize: $font-size * 1.5
+        $fontsize: $font-size-h3
     );
 
     font-weight: bold;    
@@ -35,8 +35,8 @@
     @include baseset(
         $fore: inherit,
         $back: inherit,
-        $fontsize: $font-size
+        $fontsize: $font-size-text
     );
 
-    margin-top: $spacing-size;
+    margin-top: $spacing-margin-unit;
 }

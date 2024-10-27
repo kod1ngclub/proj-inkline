@@ -1,18 +1,18 @@
-@import "../shared/util.scss";
+@import "../shared/func/base.scss";
 @import "../config.scss";
 
 .alert {
     @include baseset(
         $fore: $color-text,
-        $back: $color-light,
-        $fontsize: $font-size
+        $back: $color-background,
+        $fontsize: $font-size-text
     );
 
     // space between altert line and content
-    padding-left: $spacing-size;
+    padding-left: $spacing-padding-unit;
 
     // border at the left of content (alert line)
-    border-left-width: $font-size/2;
-    border-left-color: $color-shadow;
+    border-left-width: $font-size-text / 2;
+    border-left-color: $color-background-impact;
     border-left-style: solid;
 }

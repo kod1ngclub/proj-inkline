@@ -1,3 +1,4 @@
+@import "../shared/func/base.scss";
 @import "../shared/func/color.scss";
 @import "../config.scss";
 
@@ -18,7 +19,7 @@
 
 .link:active {
     @include colorset(
-        $fore: $color-dark,
+        $fore: $color-text-impact,
         $back: inherit
     );
 }

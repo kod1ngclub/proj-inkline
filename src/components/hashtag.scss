@@ -1,13 +1,15 @@
-@import "../shared/util.scss";
+@import "../shared/func/base.scss";
 @import "../config.scss";
+
+$HASHTAG_HEAD_CHARACTER: '#';
 
 .hashtag {
     @include baseset(
-        $fore: $color-dark,
+        $fore: $color-text-impact,
         $back: inherit,
         $fontsize: inherit
     );
 
     text-decoration: none;
-    &::before { content: '#'; }
+    &::before { content: $HASHTAG_HEAD_CHARACTER; }
 }
