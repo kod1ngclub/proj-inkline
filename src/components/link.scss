@@ -4,7 +4,7 @@
 
 .link {
     @include baseset(
-        $fore: $color-text,
+        $fore: $color-text-impact,
         $back: inherit,
         $fontsize: inherit
     );
@@ -19,7 +19,7 @@
 
 .link:active {
     @include colorset(
-        $fore: $color-text-impact,
+        $fore: $color-text,
         $back: inherit
     );
 }
