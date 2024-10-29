@@ -13,7 +13,10 @@ $spacing-padding-unit: 0.5rem;
 $spacing-margin-unit: 0.5rem;
 $spacing-gap-unit: 1rem;
 
-$screen-tablet: 1000px;
-$screen-mobile: 250px;
+$responsive-screenpx-tablet: 1000px;
+$responsive-screenpx-mobile: 250px;
+$responsive-view-desktop: 65%;
+$responsive-view-tablet: 95%;
+$responsive-view-mobile: 95%;
 /* should define @media about $screen-tablet first
    then define about $screen-mobile */
