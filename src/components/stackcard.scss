@@ -1,0 +1,60 @@
+@import "../shared/func/color.scss";
+@import "../shared/func/flex.scss";
+@import "../config.scss";
+
+.stackcard {
+    @include colorset(
+        $fore: $color-text,
+        $back: $color-background
+    );
+
+    border: 2px $color-text solid;
+}
+
+.stackcard--borderless {
+    @include colorset(
+        $fore: $color-text,
+        $back: $color-background
+    );
+}
+
+.stackcard__title {
+    @include colorset(
+        $fore: $color-text-impact,
+        $back: inherit
+    );
+}
+
+.stackcard__content {
+    @include colorset(
+        $fore: $color-text,
+        $back: inherit
+    );
+}
+
+.stackcard__detail {
+    @include flexset(
+        $direction: row,
+        $justify: left,
+        $align: ceneter,
+        $gap: $spacing-gap-unit
+    );
+}
+
+.stackcard__detail--left {
+    @include flexset(
+        $direction: row,
+        $justify: left,
+        $align: ceneter,
+        $gap: $spacing-gap-unit
+    );
+}
+
+.stackcard__detail--right {
+    @include flexset(
+        $direction: row,
+        $justify: right,
+        $align: ceneter,
+        $gap: $spacing-gap-unit
+    );
+}
