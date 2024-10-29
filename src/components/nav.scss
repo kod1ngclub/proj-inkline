@@ -1,0 +1,80 @@
+@import "../shared/func/flex.scss";
+@import "../shared/func/color.scss";
+@import "../config.scss";
+
+$NAV_BLANK_DESKTOP: (
+    x: calc($spacing-padding-unit * 10),
+    y: calc($spacing-padding-unit * 1)
+);
+
+$NAV_BLANK_TABLET: (
+    x: calc($spacing-padding-unit * 1),
+    y: calc($spacing-padding-unit * 1)
+);
+
+$NAV_BLANK_MOBILE: (
+    x: calc($spacing-padding-unit * 1),
+    y: calc($spacing-padding-unit * 1)
+);
+
+.nav {
+    @include colorset(
+        $fore: $color-text,
+        $back: $color-background-impact
+    );
+
+    @include flexset(
+        $direction: row,
+        $justify: space-between,
+        $align: center,
+        $gap: $spacing-gap-unit
+    );
+
+    padding-top: map-get($map: $NAV_BLANK_DESKTOP, $key: y);
+    padding-bottom: map-get($map: $NAV_BLANK_DESKTOP, $key: y);
+    padding-left: map-get($map: $NAV_BLANK_DESKTOP, $key: x);
+    padding-right: map-get($map: $NAV_BLANK_DESKTOP, $key: x);
+}
+
+.nav__icon {
+    font-size: $font-size-h3;
+    font-weight: bold;
+    
+    user-select: none;
+    
+    & a { text-decoration: none !important; }
+}
+
+.nav__group {
+    @include flexset(
+        $direction: row,
+        $justify: right,
+        $align: center,
+        $gap: $spacing-gap-unit
+    );
+}
+
+@media screen and (max-width: $responsive-screenpx-tablet) {
+    .nav {
+        padding-top: map-get($map: $NAV_BLANK_TABLET, $key: y);
+        padding-bottom: map-get($map: $NAV_BLANK_TABLET, $key: y);
+        padding-left: map-get($map: $NAV_BLANK_TABLET, $key: x);
+        padding-right: map-get($map: $NAV_BLANK_TABLET, $key: x);
+    }
+}
+
+@media screen and (max-width: $responsive-screenpx-mobile) {
+    .nav {
+        @include flexset(
+            $direction: column,
+            $justify: start,
+            $align: center,
+            $gap: $spacing-gap-unit
+        );
+
+        padding-top: map-get($map: $NAV_BLANK_MOBILE, $key: y);
+        padding-bottom: map-get($map: $NAV_BLANK_MOBILE, $key: y);
+        padding-left: map-get($map: $NAV_BLANK_MOBILE, $key: x);
+        padding-right: map-get($map: $NAV_BLANK_MOBILE, $key: x);
+    }
+}
