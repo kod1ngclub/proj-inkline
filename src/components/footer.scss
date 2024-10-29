@@ -1,0 +1,80 @@
+@import "../shared/func/base.scss";
+@import "../shared/func/flex.scss";
+@import "../config.scss";
+
+$FOOOTER_VERTICAL_SPACING: $spacing-gap-unit * 3;
+$FOOOTER_HORIZENTAL_SPACING: $spacing-gap-unit * 5;
+
+.footer {
+    @include baseset(
+        $fore: $color-text,
+        $back: $color-background-impact,
+        $fontsize: $font-size-text
+    );
+
+    padding-top: $FOOOTER_VERTICAL_SPACING;
+    padding-bottom: $FOOOTER_VERTICAL_SPACING;
+    padding-left: $FOOOTER_HORIZENTAL_SPACING;
+    padding-right: $FOOOTER_HORIZENTAL_SPACING;
+}
+
+.footer__content {
+    @include flexset(
+        $direction: row,
+        $justify: space-between,
+        $align: start,
+        $gap: 0
+    );
+
+    margin-top: $spacing-gap-unit * 3;
+
+    padding-left: $spacing-gap-unit * 2;
+    padding-right: $spacing-gap-unit * 2;
+}
+
+.footer__icon {
+    user-select: none;
+    text-align: center;
+
+    font-size: $font-size-h1;
+}
+
+.footer__table {
+    font-size: $font-size-text;
+}
+
+.footer__category {
+    padding: $spacing-gap-unit;
+    font-weight: bold;
+}
+
+.footer__item {
+    padding: $spacing-gap-unit;
+}
+
+.footer__license {
+    text-align: center;
+}
+
+@media screen and (max-width: $responsive-screenpx-tablet) {
+    .footer {
+        padding-top: $FOOOTER_HORIZENTAL_SPACING;
+        padding-bottom: $FOOOTER_HORIZENTAL_SPACING;
+        padding-left: $FOOOTER_VERTICAL_SPACING;
+        padding-right: $FOOOTER_VERTICAL_SPACING;
+    }
+}
+
+@media screen and (max-width: $responsive-screenpx-mobile) {
+    .footer {
+        padding-top: $FOOOTER_HORIZENTAL_SPACING;
+        padding-bottom: $FOOOTER_HORIZENTAL_SPACING;
+        padding-left: $FOOOTER_VERTICAL_SPACING;
+        padding-right: $FOOOTER_VERTICAL_SPACING;
+    }
+
+    .footer__content {
+        flex-direction: column;
+        align-items: center;
+    }
+}

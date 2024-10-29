@@ -44,7 +44,7 @@ $GRID_OPTIONS_ALIGN_CONTENT: (
     }
 }
 
-@media screen and (max-width: $screen-tablet) {
+@media screen and (max-width: $responsive-screenpx-tablet) {
     @each $ji, $jiname in $GRID_OPTIONS_JUSTIFY_ITEMS {
         @each $ai, $ainame in $GRID_OPTIONS_ALIGN_ITEMS {
             @each $jc, $jcname in $GRID_OPTIONS_JUSTIFY_CONTENT {
@@ -65,7 +65,7 @@ $GRID_OPTIONS_ALIGN_CONTENT: (
     }
 }
 
-@media screen and (max-width: $screen-mobile) {
+@media screen and (max-width: $responsive-screenpx-mobile) {
     @each $ji, $jiname in $GRID_OPTIONS_JUSTIFY_ITEMS {
         @each $ai, $ainame in $GRID_OPTIONS_ALIGN_ITEMS {
             @each $jc, $jcname in $GRID_OPTIONS_JUSTIFY_CONTENT {

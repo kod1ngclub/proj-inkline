@@ -12,7 +12,7 @@
     padding-left: $spacing-padding-unit;
 
     // border at the left of content (alert line)
-    border-left-width: $font-size-text / 2;
+    border-left-width: calc($font-size-text / 2);
     border-left-color: $color-background-impact;
     border-left-style: solid;
 }
