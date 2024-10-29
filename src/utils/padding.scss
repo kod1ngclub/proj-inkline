@@ -2,32 +2,32 @@
 
 @for $i from 1 through 3 {
     .p-#{$i} {
-        padding: $spacing-padding-unit * $i;
+        padding: calc($spacing-padding-unit * $i);
     }
     
     .pt-#{$i} {
-        padding-top: $spacing-padding-unit * $i;
+        padding-top: calc($spacing-padding-unit * $i);
     }
     
     .pb-#{$i} {
-        padding-bottom: $spacing-padding-unit * $i;
+        padding-bottom: calc($spacing-padding-unit * $i);
     }
     
     .pl-#{$i} {
-        padding-left: $spacing-padding-unit * $i;
+        padding-left: calc($spacing-padding-unit * $i);
     }
     
     .pr-#{$i} {
-        padding-right: $spacing-padding-unit * $i;
+        padding-right: calc($spacing-padding-unit * $i);
     }
     
     .py-#{$i} {
-        padding-top: $spacing-padding-unit * $i;
-        padding-bottom: $spacing-padding-unit * $i;
+        padding-top: calc($spacing-padding-unit * $i);
+        padding-bottom: calc($spacing-padding-unit * $i);
     }
     
     .px-#{$i} {
-        padding-left: $spacing-padding-unit * $i;
-        padding-right: $spacing-padding-unit * $i;
+        padding-left: calc($spacing-padding-unit * $i);
+        padding-right: calc($spacing-padding-unit * $i);
     }
 }

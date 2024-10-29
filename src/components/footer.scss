@@ -2,8 +2,10 @@
 @import "../shared/func/flex.scss";
 @import "../config.scss";
 
-$FOOOTER_VERTICAL_SPACING: $spacing-gap-unit * 3;
-$FOOOTER_HORIZENTAL_SPACING: $spacing-gap-unit * 5;
+$FOOTER_VERTICAL_SPACING: $spacing-gap-unit * 3;
+$FOOTER_HORIZENTAL_SPACING: $spacing-gap-unit * 5;
+$FOOTER_CONTENT_VERTICAL_SPACING: $spacing-gap-unit * 3;
+$FOOTER_CONTENT_HORIZENTAL_SPACING: $spacing-gap-unit * 2;
 
 .footer {
     @include baseset(
@@ -12,10 +14,10 @@ $FOOOTER_HORIZENTAL_SPACING: $spacing-gap-unit * 5;
         $fontsize: $font-size-text
     );
 
-    padding-top: $FOOOTER_VERTICAL_SPACING;
-    padding-bottom: $FOOOTER_VERTICAL_SPACING;
-    padding-left: $FOOOTER_HORIZENTAL_SPACING;
-    padding-right: $FOOOTER_HORIZENTAL_SPACING;
+    padding-top: $FOOTER_VERTICAL_SPACING;
+    padding-bottom: $FOOTER_VERTICAL_SPACING;
+    padding-left: $FOOTER_HORIZENTAL_SPACING;
+    padding-right: $FOOTER_HORIZENTAL_SPACING;
 }
 
 .footer__content {
@@ -26,10 +28,10 @@ $FOOOTER_HORIZENTAL_SPACING: $spacing-gap-unit * 5;
         $gap: 0
     );
 
-    margin-top: $spacing-gap-unit * 3;
+    margin-top: $FOOTER_CONTENT_VERTICAL_SPACING;
 
-    padding-left: $spacing-gap-unit * 2;
-    padding-right: $spacing-gap-unit * 2;
+    padding-left: $FOOTER_CONTENT_HORIZENTAL_SPACING;
+    padding-right: $FOOTER_CONTENT_HORIZENTAL_SPACING;
 }
 
 .footer__icon {
@@ -53,24 +55,25 @@ $FOOOTER_HORIZENTAL_SPACING: $spacing-gap-unit * 5;
 }
 
 .footer__license {
+    margin-top: $FOOTER_CONTENT_VERTICAL_SPACING;
     text-align: center;
 }
 
 @media screen and (max-width: $responsive-screenpx-tablet) {
     .footer {
-        padding-top: $FOOOTER_HORIZENTAL_SPACING;
-        padding-bottom: $FOOOTER_HORIZENTAL_SPACING;
-        padding-left: $FOOOTER_VERTICAL_SPACING;
-        padding-right: $FOOOTER_VERTICAL_SPACING;
+        padding-top: $FOOTER_HORIZENTAL_SPACING;
+        padding-bottom: $FOOTER_HORIZENTAL_SPACING;
+        padding-left: $FOOTER_VERTICAL_SPACING;
+        padding-right: $FOOTER_VERTICAL_SPACING;
     }
 }
 
 @media screen and (max-width: $responsive-screenpx-mobile) {
     .footer {
-        padding-top: $FOOOTER_HORIZENTAL_SPACING;
-        padding-bottom: $FOOOTER_HORIZENTAL_SPACING;
-        padding-left: $FOOOTER_VERTICAL_SPACING;
-        padding-right: $FOOOTER_VERTICAL_SPACING;
+        padding-top: $FOOTER_HORIZENTAL_SPACING;
+        padding-bottom: $FOOTER_HORIZENTAL_SPACING;
+        padding-left: $FOOTER_VERTICAL_SPACING;
+        padding-right: $FOOTER_VERTICAL_SPACING;
     }
 
     .footer__content {
