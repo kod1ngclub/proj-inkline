@@ -2,10 +2,35 @@
 @import "../shared/func/flex.scss";
 @import "../config.scss";
 
-$FOOTER_VERTICAL_SPACING: $spacing-gap-unit * 3;
-$FOOTER_HORIZENTAL_SPACING: $spacing-gap-unit * 5;
-$FOOTER_CONTENT_VERTICAL_SPACING: $spacing-gap-unit * 3;
-$FOOTER_CONTENT_HORIZENTAL_SPACING: $spacing-gap-unit * 2;
+$FOOTER_BLANK_DESKTOP: (
+    x: $spacing-gap-unit * 3,
+    y: $spacing-gap-unit * 3
+);
+
+$FOOTER_CONTENT_BLANK_DESKTOP: (
+    x: $spacing-gap-unit * 6,
+    y: $spacing-gap-unit * 2
+);
+
+$FOOTER_BLANK_TABLET: (
+    x: $spacing-gap-unit * 5,
+    y: $spacing-gap-unit * 3
+);
+
+$FOOTER_CONTENT_BLANK_TABLET: (
+    x: 0,
+    y: 0
+);
+
+$FOOTER_BLANK_MOBILE: (
+    x: $spacing-gap-unit * 5,
+    y: $spacing-gap-unit * 3
+);
+
+$FOOTER_CONTENT_BLANK_MOBILE: (
+    x: 0,
+    y: 0
+);
 
 .footer {
     @include baseset(
@@ -14,24 +39,24 @@ $FOOTER_CONTENT_HORIZENTAL_SPACING: $spacing-gap-unit * 2;
         $fontsize: $font-size-text
     );
 
-    padding-top: $FOOTER_VERTICAL_SPACING;
-    padding-bottom: $FOOTER_VERTICAL_SPACING;
-    padding-left: $FOOTER_HORIZENTAL_SPACING;
-    padding-right: $FOOTER_HORIZENTAL_SPACING;
+    padding-top: map-get($map: $FOOTER_BLANK_DESKTOP, $key: y);
+    padding-bottom: map-get($map: $FOOTER_BLANK_DESKTOP, $key: y);
+    padding-left: map-get($map: $FOOTER_BLANK_DESKTOP, $key: x);
+    padding-right: map-get($map: $FOOTER_BLANK_DESKTOP, $key: x);
 }
 
 .footer__content {
     @include flexset(
         $direction: row,
         $justify: space-between,
-        $align: start,
+        $align: center,
         $gap: 0
     );
 
-    margin-top: $FOOTER_CONTENT_VERTICAL_SPACING;
+    padding-top: map-get($map: $FOOTER_CONTENT_BLANK_DESKTOP, $key: y);
 
-    padding-left: $FOOTER_CONTENT_HORIZENTAL_SPACING;
-    padding-right: $FOOTER_CONTENT_HORIZENTAL_SPACING;
+    padding-left: map-get($map: $FOOTER_CONTENT_BLANK_DESKTOP, $key: x);
+    padding-right: map-get($map: $FOOTER_CONTENT_BLANK_DESKTOP, $key: x);
 }
 
 .footer__icon {
@@ -55,29 +80,36 @@ $FOOTER_CONTENT_HORIZENTAL_SPACING: $spacing-gap-unit * 2;
 }
 
 .footer__license {
-    margin-top: $FOOTER_CONTENT_VERTICAL_SPACING;
+    margin-top: map-get($map: $FOOTER_BLANK_DESKTOP, $key: y);
     text-align: center;
 }
 
 @media screen and (max-width: $responsive-screenpx-tablet) {
     .footer {
-        padding-top: $FOOTER_HORIZENTAL_SPACING;
-        padding-bottom: $FOOTER_HORIZENTAL_SPACING;
-        padding-left: $FOOTER_VERTICAL_SPACING;
-        padding-right: $FOOTER_VERTICAL_SPACING;
+        padding-top: map-get($map: $FOOTER_BLANK_TABLET, $key: y);
+        padding-bottom: map-get($map: $FOOTER_BLANK_TABLET, $key: y);
+        padding-left: map-get($map: $FOOTER_BLANK_TABLET, $key: x);
+        padding-right: map-get($map: $FOOTER_BLANK_TABLET, $key: x);
+    }
+
+    .footer__license {
+        margin-top: map-get($map: $FOOTER_BLANK_TABLET, $key: y);
     }
 }
 
 @media screen and (max-width: $responsive-screenpx-mobile) {
     .footer {
-        padding-top: $FOOTER_HORIZENTAL_SPACING;
-        padding-bottom: $FOOTER_HORIZENTAL_SPACING;
-        padding-left: $FOOTER_VERTICAL_SPACING;
-        padding-right: $FOOTER_VERTICAL_SPACING;
+        padding-top: map-get($map: $FOOTER_BLANK_MOBILE, $key: y);
+        padding-bottom: map-get($map: $FOOTER_BLANK_MOBILE, $key: y);
+        padding-left: map-get($map: $FOOTER_BLANK_MOBILE, $key: x);
+        padding-right: map-get($map: $FOOTER_BLANK_MOBILE, $key: x);
     }
 
     .footer__content {
         flex-direction: column;
-        align-items: center;
+    }
+
+    .footer__license {
+        margin-top: map-get($map: $FOOTER_BLANK_MOBILE, $key: y);
     }
 }
