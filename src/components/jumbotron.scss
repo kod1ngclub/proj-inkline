@@ -1,0 +1,12 @@
+@import "../shared/func/color.scss";
+@import "../config.scss";
+
+.jumbotron {
+    width: 100dvw;
+    height: 100dvh;
+
+    @include colorset(
+        $foreground: $color-text-impact,
+        $background: $color-background-impact
+    );
+}
