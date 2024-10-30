@@ -6,7 +6,7 @@
     height: 100dvh;
 
     @include colorset(
-        $foreground: $color-text-impact,
-        $background: $color-background-impact
+        $fore: $color-text-impact,
+        $back: $color-background-impact
     );
 }
