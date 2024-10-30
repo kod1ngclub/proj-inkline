@@ -1,0 +1,193 @@
+@import "../shared/func/base.scss";
+@import "../shared/func/flex.scss";
+@import "../shared/func/color.scss";
+@import "../config.scss";
+
+$STANDARD_NAV_BLANK_DESKTOP: (
+    x: calc($spacing-padding-unit * 10),
+    y: calc($spacing-padding-unit * 1)
+);
+
+$STANDARD_NAV_BLANK_TABLET: (
+    x: calc($spacing-padding-unit * 1),
+    y: calc($spacing-padding-unit * 1)
+);
+
+$STANDARD_NAV_BLANK_MOBILE: (
+    x: calc($spacing-padding-unit * 1),
+    y: calc($spacing-padding-unit * 1)
+);
+
+$STANDARD_FOOTER_BLANK_DESKTOP: (
+    x: $spacing-gap-unit * 3,
+    y: $spacing-gap-unit * 3
+);
+
+$STANDARD_FOOTER_CONTENT_BLANK_DESKTOP: (
+    x: $spacing-gap-unit * 6,
+    y: $spacing-gap-unit * 2
+);
+
+$STANDARD_FOOTER_BLANK_TABLET: (
+    x: $spacing-gap-unit * 5,
+    y: $spacing-gap-unit * 3
+);
+
+$STANDARD_FOOTER_CONTENT_BLANK_TABLET: (
+    x: 0,
+    y: 0
+);
+
+$STANDARD_FOOTER_BLANK_MOBILE: (
+    x: $spacing-gap-unit * 5,
+    y: $spacing-gap-unit * 3
+);
+
+$STANDARD_FOOTER_CONTENT_BLANK_MOBILE: (
+    x: 0,
+    y: 0
+);
+
+// nav component
+.app-standard__nav {
+    @include colorset(
+        $fore: $color-text,
+        $back: $color-background-impact
+    );
+
+    @include flexset(
+        $direction: row,
+        $justify: space-between,
+        $align: center,
+        $gap: 0
+    );
+
+    padding-top: map-get($map: $STANDARD_NAV_BLANK_DESKTOP, $key: y);
+    padding-bottom: map-get($map: $STANDARD_NAV_BLANK_DESKTOP, $key: y);
+    padding-left: map-get($map: $STANDARD_NAV_BLANK_DESKTOP, $key: x);
+    padding-right: map-get($map: $STANDARD_NAV_BLANK_DESKTOP, $key: x);
+}
+
+.app-standard__nav__icon {
+    font-size: $font-size-h3;
+    font-weight: bold;
+    
+    user-select: none;
+    
+    & a { text-decoration: none !important; }
+}
+
+.app-standard__nav__group {
+    @include flexset(
+        $direction: row,
+        $justify: right,
+        $align: center,
+        $gap: $spacing-gap-unit
+    );
+}
+
+// footer component
+.app-standard__footer {
+    @include baseset(
+        $fore: $color-text,
+        $back: $color-background-impact,
+        $fontsize: $font-size-text
+    );
+
+    padding-top: map-get($map: $STANDARD_FOOTER_BLANK_DESKTOP, $key: y);
+    padding-bottom: map-get($map: $STANDARD_FOOTER_BLANK_DESKTOP, $key: y);
+    padding-left: map-get($map: $STANDARD_FOOTER_BLANK_DESKTOP, $key: x);
+    padding-right: map-get($map: $STANDARD_FOOTER_BLANK_DESKTOP, $key: x);
+}
+
+.app-standard__footer__content {
+    @include flexset(
+        $direction: row,
+        $justify: space-between,
+        $align: center,
+        $gap: 0
+    );
+
+    padding-top: map-get($map: $STANDARD_FOOTER_CONTENT_BLANK_DESKTOP, $key: y);
+
+    padding-left: map-get($map: $STANDARD_FOOTER_CONTENT_BLANK_DESKTOP, $key: x);
+    padding-right: map-get($map: $STANDARD_FOOTER_CONTENT_BLANK_DESKTOP, $key: x);
+}
+
+.app-standard__footer__icon {
+    user-select: none;
+    text-align: center;
+
+    font-size: $font-size-h1;
+}
+
+.app-standard__footer__table {
+    font-size: $font-size-text;
+}
+
+.app-standard__footer__category {
+    padding: $spacing-gap-unit;
+    font-weight: bold;
+}
+
+.app-standard__footer__item {
+    padding: $spacing-gap-unit;
+}
+
+.app-standard__footer__license {
+    margin-top: map-get($map: $STANDARD_FOOTER_BLANK_DESKTOP, $key: y);
+    text-align: center;
+}
+
+// when tablet
+@media screen and (max-width: $responsive-screenpx-tablet) {
+    .app-standard__nav {
+        padding-top: map-get($map: $STANDARD_NAV_BLANK_TABLET, $key: y);
+        padding-bottom: map-get($map: $STANDARD_NAV_BLANK_TABLET, $key: y);
+        padding-left: map-get($map: $STANDARD_NAV_BLANK_TABLET, $key: x);
+        padding-right: map-get($map: $STANDARD_NAV_BLANK_TABLET, $key: x);
+    }
+
+    .app-standard__footer {
+        padding-top: map-get($map: $STANDARD_FOOTER_BLANK_TABLET, $key: y);
+        padding-bottom: map-get($map: $STANDARD_FOOTER_BLANK_TABLET, $key: y);
+        padding-left: map-get($map: $STANDARD_FOOTER_BLANK_TABLET, $key: x);
+        padding-right: map-get($map: $STANDARD_FOOTER_BLANK_TABLET, $key: x);
+    }
+
+    .app-standard__footer__license {
+        margin-top: map-get($map: $STANDARD_FOOTER_BLANK_TABLET, $key: y);
+    }
+}
+
+// when mobile
+@media screen and (max-width: $responsive-screenpx-mobile) {
+    .app-standard__nav {
+        @include flexset(
+            $direction: column,
+            $justify: start,
+            $align: center,
+            $gap: $spacing-gap-unit
+        );
+
+        padding-top: map-get($map: $STANDARD_NAV_BLANK_MOBILE, $key: y);
+        padding-bottom: map-get($map: $STANDARD_NAV_BLANK_MOBILE, $key: y);
+        padding-left: map-get($map: $STANDARD_NAV_BLANK_MOBILE, $key: x);
+        padding-right: map-get($map: $STANDARD_NAV_BLANK_MOBILE, $key: x);
+    }
+
+    .app-standard__footer {
+        padding-top: map-get($map: $STANDARD_FOOTER_BLANK_MOBILE, $key: y);
+        padding-bottom: map-get($map: $STANDARD_FOOTER_BLANK_MOBILE, $key: y);
+        padding-left: map-get($map: $STANDARD_FOOTER_BLANK_MOBILE, $key: x);
+        padding-right: map-get($map: $STANDARD_FOOTER_BLANK_MOBILE, $key: x);
+    }
+
+    .app-standard__footer__content {
+        flex-direction: column;
+    }
+
+    .app-standard__footer__license {
+        margin-top: map-get($map: $STANDARD_FOOTER_BLANK_MOBILE, $key: y);
+    }
+}
