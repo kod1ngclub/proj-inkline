@@ -1,0 +1,140 @@
+@import "../shared/func/color.scss";
+@import "../shared/func/flex.scss";
+@import "../config.scss";
+
+/*
+ * [sidenav]
+ * - top
+ *   - icon
+ *   - group
+ * - body
+ *   - nav
+ *   - content (slot)
+ */
+
+$SIDENAV_TOP_RATIO: 0.5fr;
+$SIDENAV_BODY_RATIO: 9.5fr;
+$SIDENAV_SIDE_RATIO: 1.5fr;
+$SIDENAV_CONTENT_RATIO: 8.5fr;
+
+$SIDENAV_NAV_BLANK_DESKTOP: (
+    x: $spacing-padding-unit,
+    y: $spacing-padding-unit
+);
+$SIDENAV_NAV_BLANK_TABLET: (
+    x: $spacing-padding-unit,
+    y: $spacing-padding-unit
+);
+$SIDENAV_NAV_BLANK_MOBILE: (
+    x: $spacing-padding-unit,
+    y: $spacing-padding-unit
+);
+
+.app-sidenav {
+    // fit to whole screen
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+
+    // grid
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: $SIDENAV_TOP_RATIO $SIDENAV_BODY_RATIO;
+}
+
+// top component
+.app-sidenav__top {
+    @include colorset(
+        $fore: $color-text,
+        $back: $color-background-impact
+    );
+
+    @include flexset(
+        $direction: row,
+        $justify: space-between,
+        $align: center,
+        $gap: 0
+    );
+
+    padding-top: map-get($map: $SIDENAV_NAV_BLANK_DESKTOP, $key: y);
+    padding-bottom: map-get($map: $SIDENAV_NAV_BLANK_DESKTOP, $key: y);
+    padding-left: map-get($map: $SIDENAV_NAV_BLANK_DESKTOP, $key: x);
+    padding-right: map-get($map: $SIDENAV_NAV_BLANK_DESKTOP, $key: x);
+}
+
+.app-sidenav__top__icon {
+    user-select: none;
+    text-align: center;
+
+    font-size: $font-size-h3;
+}
+
+.app-sidenav__top__group {
+    @include flexset(
+        $direction: row,
+        $justify: right,
+        $align: center,
+        $gap: $spacing-gap-unit
+    );
+}
+
+.app-sidenav__body {
+    // grid
+    display: grid;
+    grid-template-columns: $SIDENAV_SIDE_RATIO $SIDENAV_CONTENT_RATIO;
+    grid-template-rows: 1fr;
+}
+
+// nav component
+.app-sidenav__body__nav {
+    @include colorset(
+        $fore: inherit,
+        $back: $color-background-impact
+    );
+
+    @include flexset(
+        $direction: column,
+        $justify: start,
+        $align: center,
+        $gap: $spacing-gap-unit
+    );
+
+    // padding
+    padding: $spacing-padding-unit;
+}
+
+// content slot
+.app-sidenav__body__content {
+    background-color: transparent;
+}
+
+// when tablet
+@media screen and (max-width: $responsive-screenpx-tablet) {
+    .app-sidenav__top {
+        padding-top: map-get($map: $SIDENAV_NAV_BLANK_TABLET, $key: y);
+        padding-bottom: map-get($map: $SIDENAV_NAV_BLANK_TABLET, $key: y);
+        padding-left: map-get($map: $SIDENAV_NAV_BLANK_TABLET, $key: x);
+        padding-right: map-get($map: $SIDENAV_NAV_BLANK_TABLET, $key: x);
+    }
+}
+
+// when mobile
+@media screen and (max-width: $responsive-screenpx-mobile) {
+    .app-sidenav__top {
+        padding-top: map-get($map: $SIDENAV_NAV_BLANK_MOBILE, $key: y);
+        padding-bottom: map-get($map: $SIDENAV_NAV_BLANK_MOBILE, $key: y);
+        padding-left: map-get($map: $SIDENAV_NAV_BLANK_MOBILE, $key: x);
+        padding-right: map-get($map: $SIDENAV_NAV_BLANK_MOBILE, $key: x);
+    }
+
+    .app-sidenav__body {
+        // grid
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .app-sidenav__body__nav {
+        display: none;
+    }
+}
