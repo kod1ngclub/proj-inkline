@@ -1,0 +1,34 @@
+@import "../shared/func/base.scss";
+@import "../shared/func/color.scss";
+@import "../shared/util.scss";
+
+$BUTTON_BLANK: (
+    x: $spacing-padding-unit,
+    y: calc($spacing-padding-unit / 3)
+);
+
+.button {
+    @include baseset(
+        $fore: $color-text,
+        $back: $color-background-impact,
+        $fontsize: inherit
+    );
+
+    padding-top: map-get($map: $BUTTON_BLANK, $key: y);
+    padding-bottom: map-get($map: $BUTTON_BLANK, $key: y);
+    padding-left: map-get($map: $BUTTON_BLANK, $key: x);
+    padding-right: map-get($map: $BUTTON_BLANK, $key: x);
+
+    border-radius: $spacing-radius;
+}
+
+.button:hover {
+    @include colorset(
+        $fore: $color-text-impact,
+        $back: $color-background-impact
+    );
+}
+
+.button:active {
+    border-style: ridge;
+}
