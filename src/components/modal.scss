@@ -1,0 +1,13 @@
+@import "../shared/func/color.scss";
+@import "../config.scss";
+
+.modal {
+    @include colorset(
+        $fore: $color-text,
+        $back: $color-background-impact
+    );
+    
+    // border
+    border: none;
+    border-radius: $spacing-radius;
+}
