@@ -4,10 +4,9 @@
 .modal {
     @include colorset(
         $fore: $color-text,
-        $back: $color-background-impact
+        $back: $color-background
     );
-    
+
     // border
     border: none;
-    border-radius: $spacing-radius;
 }

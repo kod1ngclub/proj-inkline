@@ -1,4 +1,5 @@
 @import "../shared/func/color.scss";
+@import "../shared/func/border.scss";
 @import "../config.scss";
 
 .card {
@@ -8,6 +9,12 @@
     );
 
     border: 2px $color-text solid;
+    @include borderset(
+        $width: $border-width,
+        $color: $color-text,
+        $default: solid,
+        $clicked: solid
+    );
 }
 
 .card--borderless {

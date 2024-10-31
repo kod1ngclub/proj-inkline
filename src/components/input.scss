@@ -1,0 +1,142 @@
+@import "../shared/func/color.scss";
+@import "../shared/func/border.scss";
+@import "../shared/util.scss";
+@import "../config.scss";
+
+$INPUT_BUTTONLLIKE_BLANK: (
+    x: $spacing-padding-unit,
+    y: calc($spacing-padding-unit / 3)
+);
+
+$INPUT_TEXTLIKE_BLANK: (
+    x: $spacing-padding-unit,
+    y: calc($spacing-padding-unit / 3)
+);
+
+$INPUT_PICKLIKE_BLANK: (
+    x: calc($spacing-padding-unit / 3),
+    y: calc($spacing-padding-unit / 3)
+);
+
+// use blank
+@mixin USEBLANK($blank) {
+    padding-top: map-get($map: $blank, $key: y);
+    padding-bottom: map-get($map: $blank, $key: y);
+    padding-left: map-get($map: $blank, $key: x);
+    padding-right: map-get($map: $blank, $key: x);
+}
+
+.input-button,
+.input-submit,
+.input-reset {
+    @include baseset(
+        $fore: $color-text,
+        $back: $color-background-impact,
+        $fontsize: inherit
+    );
+
+    @include USEBLANK($INPUT_BUTTONLLIKE_BLANK);
+    @include buttonbordered();
+
+    &:hover {
+        @include colorset(
+            $fore: $color-text-impact,
+            $back: $color-background-impact
+        );
+    }
+}
+
+.input-text,
+.input-password,
+.input-email,
+.input-search,
+.input-tel,
+.input-url,
+.input-date,
+.input-datetime-local {
+    @include baseset(
+        $fore: $color-text,
+        $back: $color-background-impact,
+        $fontsize: inherit
+    );
+
+    @include USEBLANK($INPUT_TEXTLIKE_BLANK);
+    @include borderset(
+        $width: $border-width,
+        $color: $border-color,
+        $default: inset,
+        $clicked: inset
+    );
+
+    outline: none;
+}
+
+.input-color {
+    @include baseset(
+        $fore: $color-text,
+        $back: $color-background-impact,
+        $fontsize: inherit
+    );
+
+    @include USEBLANK($INPUT_PICKLIKE_BLANK);
+    @include buttonbordered();
+
+    &:hover {
+        @include colorset(
+            $fore: $color-text-impact,
+            $back: $color-background-impact
+        );
+    }
+}
+
+.input-checkbox,
+.input-radio {
+    width: $font-size-text;
+    height: $font-size-text;
+
+    accent-color: $color-text;
+}
+
+.input-file {
+    &::file-selector-button {
+        @include baseset(
+            $fore: $color-text,
+            $back: $color-background-impact,
+            $fontsize: inherit
+        );
+
+        @include USEBLANK($INPUT_BUTTONLLIKE_BLANK);
+        @include buttonbordered();
+
+        &:hover {
+            @include colorset(
+                $fore: $color-text-impact,
+                $back: $color-background-impact
+            );
+        }
+    }
+
+    &::-webkit-file-upload-button {
+        @include baseset(
+            $fore: $color-text,
+            $back: $color-background-impact,
+            $fontsize: inherit
+        );
+
+        @include USEBLANK($INPUT_BUTTONLLIKE_BLANK);
+        @include buttonbordered();
+
+        &:hover {
+            @include colorset(
+                $fore: $color-text-impact,
+                $back: $color-background-impact
+            );
+        }
+    }
+}
+
+.input-range {
+    accent-color: $color-text;
+}
+
+// date datetime-local range

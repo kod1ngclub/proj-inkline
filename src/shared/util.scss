@@ -1,4 +1,5 @@
 @import "func/base.scss";
+@import "func/border.scss";
 @import "../config.scss";
 
 $DEFAULT_FOREGROUND_COLOR: $color-text;
@@ -18,5 +19,14 @@ $DEFAULT_FONT_SIZE: $font-size-text;
         $fore: inherit,
         $back: inherit,
         $fontsize: inherit
+    );
+}
+
+@mixin buttonbordered() {
+    @include borderset(
+        $width: $border-width,
+        $color: $border-color,
+        $default: $border-default,
+        $clicked: $border-clicked
     );
 }

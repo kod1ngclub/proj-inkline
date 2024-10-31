@@ -12,7 +12,11 @@ $font-size-h3: 2rem;
 $spacing-padding-unit: 1rem;
 $spacing-margin-unit: 1rem;
 $spacing-gap-unit: 1rem;
-$spacing-radius: 5px;
+
+$border-default: outset;
+$border-clicked: inset;
+$border-color: whitesmoke;
+$border-width: 2px;
 
 $responsive-screenpx-tablet: 1000px;
 $responsive-screenpx-mobile: 450px;
