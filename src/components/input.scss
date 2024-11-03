@@ -36,16 +36,10 @@ $INPUT_PICKLIKE_BLANK: (
     );
 
     @include USEBLANK($INPUT_BUTTONLLIKE_BLANK);
-    @include buttonbordered();
 
-    &:hover {
-        @include colorset(
-            $fore: $color-text-impact,
-            $back: $color-background-impact
-        );
-    }
+    @include clickable();
 
-    &:active { color: $color-text; }
+    border: none;
 }
 
 .input-text,
@@ -63,16 +57,16 @@ $INPUT_PICKLIKE_BLANK: (
     );
 
     @include USEBLANK($INPUT_TEXTLIKE_BLANK);
+
     @include borderset(
         $width: $border-width,
-        $color: $border-color,
-        $default: $border-default,
-        $clicked: $border-clicked
+        $color: $border-color
     );
 
-    outline: none;
+    @include clickable();
 
-    &:active { color: $color-text; }
+    outline: none;
+    border: none;
 }
 
 .input-color {
@@ -83,16 +77,13 @@ $INPUT_PICKLIKE_BLANK: (
     );
 
     @include USEBLANK($INPUT_PICKLIKE_BLANK);
-    @include buttonbordered();
 
-    &:hover {
-        @include colorset(
-            $fore: $color-text-impact,
-            $back: $color-background-impact
-        );
-    }
-
-    &:active { color: $color-text; }
+    @include borderset(
+        $width: $border-width,
+        $color: $color-text,
+    );
+    
+    @include clickable();
 }
 
 .input-checkbox,
@@ -102,7 +93,7 @@ $INPUT_PICKLIKE_BLANK: (
 
     accent-color: $color-text;
 
-    &:active { color: $color-text; }
+    @include clickable();
 }
 
 .input-file {
@@ -114,14 +105,10 @@ $INPUT_PICKLIKE_BLANK: (
         );
 
         @include USEBLANK($INPUT_BUTTONLLIKE_BLANK);
-        @include buttonbordered();
+        
+        @include clickable();
 
-        &:hover {
-            @include colorset(
-                $fore: $color-text-impact,
-                $back: $color-background-impact
-            );
-        }
+        border: none;
     }
 
     &::-webkit-file-upload-button {
@@ -132,17 +119,9 @@ $INPUT_PICKLIKE_BLANK: (
         );
 
         @include USEBLANK($INPUT_BUTTONLLIKE_BLANK);
-        @include buttonbordered();
-
-        &:hover {
-            @include colorset(
-                $fore: $color-text-impact,
-                $back: $color-background-impact
-            );
-        }
+        
+        @include clickable();
     }
-
-    &:active { color: $color-text; }
 }
 
 .input-range {

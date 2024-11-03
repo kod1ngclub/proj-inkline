@@ -8,12 +8,9 @@
         $back: $color-background
     );
 
-    border: 2px $color-text solid;
     @include borderset(
         $width: $border-width,
         $color: $color-text,
-        $default: solid,
-        $clicked: solid
     );
 }
 

@@ -1,10 +1,11 @@
 @import "func/base.scss";
-@import "func/border.scss";
 @import "../config.scss";
 
 $DEFAULT_FOREGROUND_COLOR: $color-text;
 $DEFAULT_BACKGROUND_COLOR: $color-background;
 $DEFAULT_FONT_SIZE: $font-size-text;
+$DEFAULT_CLICKABLE_HOVER: $color-text-impact;
+$DEFAULT_CLICKABLE_CLICKED: $color-text;
 
 @mixin default() {
     @include baseset(
@@ -22,11 +23,7 @@ $DEFAULT_FONT_SIZE: $font-size-text;
     );
 }
 
-@mixin buttonbordered() {
-    @include borderset(
-        $width: $border-width,
-        $color: $border-color,
-        $default: $border-default,
-        $clicked: $border-clicked
-    );
+@mixin clickable() {
+    &:hover { color: $DEFAULT_CLICKABLE_HOVER; }
+    &:active { color: $DEFAULT_CLICKABLE_CLICKED; }
 }

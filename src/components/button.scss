@@ -1,6 +1,5 @@
 @import "../shared/func/base.scss";
 @import "../shared/func/color.scss";
-@import "../shared/util.scss";
 
 $BUTTON_BLANK: (
     x: $spacing-padding-unit,
@@ -19,7 +18,7 @@ $BUTTON_BLANK: (
     padding-left: map-get($map: $BUTTON_BLANK, $key: x);
     padding-right: map-get($map: $BUTTON_BLANK, $key: x);
 
-    @include buttonbordered();
+    border: none;
 }
 
 .button:hover {

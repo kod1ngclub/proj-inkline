@@ -1,7 +1,3 @@
-@import "../../config.scss";
-
-@mixin borderset($width, $color, $default, $clicked) {
-    border: $width $color $default;
-
-    &:active { border-style: $clicked; }
+@mixin borderset($width, $color) {
+    border: $width $color solid;
 }
