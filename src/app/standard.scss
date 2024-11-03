@@ -74,6 +74,7 @@ $STANDARD_FOOTER_CONTENT_BLANK_MOBILE: (
     
     user-select: none;
     
+    // forcely unable anchor's text decoration
     & a { text-decoration: none !important; }
 }
 

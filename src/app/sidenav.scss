@@ -30,11 +30,14 @@ $SIDENAV_NAV_BLANK_MOBILE: (
     y: $spacing-padding-unit
 );
 
-.app-sidenav {
-    // fit to whole screen
+@mixin FILLOUT_WHOLE_SCREEN {
     position: absolute;
     height: 100vh;
     width: 100vw;
+}
+
+.app-sidenav {
+    @include FILLOUT_WHOLE_SCREEN();
 
     // grid
     display: grid;
