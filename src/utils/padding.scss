@@ -1,6 +1,6 @@
 @import "../config.scss";
 
-$PADDNIG_UNIT: $spacing-padding-unit;
+$PADDING_UNIT: $spacing-padding-unit;
 
 @for $i from 1 through 3 {
     .p-#{$i} {

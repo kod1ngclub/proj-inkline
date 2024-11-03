@@ -12,5 +12,6 @@ $HASHTAG_TEXT_DECO: none;
     );
 
     text-decoration: $HASHTAG_TEXT_DECO;
-    &::before { content: $HASHTAG_HEAD_CHARACTER; }
 }
+
+.hashtag::before { content: $HASHTAG_HEAD_CHARACTER; }

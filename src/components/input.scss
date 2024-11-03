@@ -97,31 +97,33 @@ $INPUT_PICKLIKE_BLANK: (
 }
 
 .input-file {
-    &::file-selector-button {
-        @include baseset(
-            $fore: $color-text,
-            $back: $color-background-impact,
-            $fontsize: inherit
-        );
+    border: none;
+}
 
-        @include USEBLANK($INPUT_BUTTONLLIKE_BLANK);
-        
-        @include clickable();
+.input-file::file-selector-button {
+    @include baseset(
+        $fore: $color-text,
+        $back: $color-background-impact,
+        $fontsize: inherit
+    );
 
-        border: none;
-    }
+    @include USEBLANK($INPUT_BUTTONLLIKE_BLANK);
 
-    &::-webkit-file-upload-button {
-        @include baseset(
-            $fore: $color-text,
-            $back: $color-background-impact,
-            $fontsize: inherit
-        );
+    @include clickable();
+    
+    border: none;
+}
 
-        @include USEBLANK($INPUT_BUTTONLLIKE_BLANK);
-        
-        @include clickable();
-    }
+.input-file::-webkit-file-upload-button {
+    @include baseset(
+        $fore: $color-text,
+        $back: $color-background-impact,
+        $fontsize: inherit
+    );
+
+    @include USEBLANK($INPUT_BUTTONLLIKE_BLANK);
+    
+    @include clickable();
 }
 
 .input-range {

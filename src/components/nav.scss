@@ -41,9 +41,9 @@ $NAV_BLANK_MOBILE: (
     font-weight: bold;
     
     user-select: none;
-    
-    & a { text-decoration: none !important; }
 }
+
+.nav__icon a { text-decoration: none !important; }
 
 .nav__group {
     @include flexset(
