@@ -1,35 +1,37 @@
-@import "../shared/func/color.scss";
 @import "../shared/func/border.scss";
+@import "../shared/util.scss";
 @import "../config.scss";
 
+$CARD_BORDER_WIDTH: $border-width;
+$CARD_BORDER_COLOR: $color-text;
+
+$CARD_IMAGE_FIT: 100%;
+
+$CARD_TITLE_SIZE: $font-size-h3;
+$CARD_TITLE_SPACNIG: $spacing-margin-unit;
+
 .card {
-    @include colorset(
-        $fore: $color-text,
-        $back: $color-background
-    );
+    @include default();
 
     @include borderset(
-        $width: $border-width,
-        $color: $color-text,
+        $width: $CARD_BORDER_WIDTH,
+        $color: $CARD_BORDER_COLOR,
     );
 }
 
 .card--borderless {
-    @include colorset(
-        $fore: $color-text,
-        $back: $color-background
-    );
+    @include default();
 }
 
 .card__image {
-    width: 100%;
+    width: $CARD_IMAGE_FIT;
 }
 
 .card__title {
     @include baseset(
         $fore: inherit,
         $back: inherit,
-        $fontsize: $font-size-h3
+        $fontsize: $CARD_TITLE_SIZE
     );
 
     font-weight: bold;    
@@ -42,5 +44,5 @@
         $fontsize: $font-size-text
     );
 
-    margin-top: $spacing-margin-unit;
+    margin-top: $CARD_TITLE_SPACNIG;
 }

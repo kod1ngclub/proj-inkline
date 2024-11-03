@@ -1,8 +1,13 @@
 @import "../config.scss";
 
+$HR_COLOR: $color-teext;
+$HR_WIDTH: 100%;
+
 .hr {
-    background-color: $color-text;
+    background-color: $HR_COLOR;
     border-style: solid;
 
-    width: 100%;
+    width: $HR_WIDTH;
+
+    margin: auto;
 }

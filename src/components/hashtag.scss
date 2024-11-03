@@ -2,6 +2,7 @@
 @import "../config.scss";
 
 $HASHTAG_HEAD_CHARACTER: '#';
+$HASHTAG_TEXT_DECO: none;
 
 .hashtag {
     @include baseset(
@@ -10,6 +11,6 @@ $HASHTAG_HEAD_CHARACTER: '#';
         $fontsize: inherit
     );
 
-    text-decoration: none;
+    text-decoration: $HASHTAG_TEXT_DECO;
     &::before { content: $HASHTAG_HEAD_CHARACTER; }
 }
