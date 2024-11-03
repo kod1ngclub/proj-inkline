@@ -44,6 +44,8 @@ $INPUT_PICKLIKE_BLANK: (
             $back: $color-background-impact
         );
     }
+
+    &:active { color: $color-text; }
 }
 
 .input-text,
@@ -64,11 +66,13 @@ $INPUT_PICKLIKE_BLANK: (
     @include borderset(
         $width: $border-width,
         $color: $border-color,
-        $default: inset,
-        $clicked: inset
+        $default: $border-default,
+        $clicked: $border-clicked
     );
 
     outline: none;
+
+    &:active { color: $color-text; }
 }
 
 .input-color {
@@ -87,6 +91,8 @@ $INPUT_PICKLIKE_BLANK: (
             $back: $color-background-impact
         );
     }
+
+    &:active { color: $color-text; }
 }
 
 .input-checkbox,
@@ -95,6 +101,8 @@ $INPUT_PICKLIKE_BLANK: (
     height: $font-size-text;
 
     accent-color: $color-text;
+
+    &:active { color: $color-text; }
 }
 
 .input-file {
@@ -133,6 +141,8 @@ $INPUT_PICKLIKE_BLANK: (
             );
         }
     }
+
+    &:active { color: $color-text; }
 }
 
 .input-range {

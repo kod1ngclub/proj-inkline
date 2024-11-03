@@ -28,3 +28,5 @@ $BUTTON_BLANK: (
         $back: $color-background-impact
     );
 }
+
+.button:active { color: $color-text; }
