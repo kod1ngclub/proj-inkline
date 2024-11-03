@@ -17,6 +17,8 @@ $FLEX_OPTIONS_ALIGN_ITEMS: (
     c: center
 );
 
+$FLEX_GAP: $spacing-gap-unit;
+
 @each $d, $dname in $FLEX_OPTIONS_DIRECTIONS {
     @each $j, $jname in $FLEX_OPTIONS_JUSTIFY_CONTENT {
         @each $a, $aname in $FLEX_OPTIONS_ALIGN_ITEMS {
@@ -25,7 +27,7 @@ $FLEX_OPTIONS_ALIGN_ITEMS: (
                     $direction: $dname,
                     $justify: $jname,
                     $align: $aname,
-                    $gap: $spacing-gap-unit
+                    $gap: $FLEX_GAP
                 );
             }
         }

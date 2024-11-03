@@ -1,34 +1,36 @@
 @import "../config.scss";
 
+$MARGIN_UNIT: $spacing-margin-unit;
+
 @for $i from 1 through 3 {
     .m-#{$i} {
-        margin: calc($spacing-margin-unit * $i);
+        margin: calc($MARGIN_UNIT * $i);
     }
     
     .mt-#{$i} {
-        margin-top: calc($spacing-margin-unit * $i);
+        margin-top: calc($MARGIN_UNIT * $i);
     }
     
     .mb-#{$i} {
-        margin-bottom: calc($spacing-margin-unit * $i);
+        margin-bottom: calc($MARGIN_UNIT * $i);
     }
     
     .ml-#{$i} {
-        margin-left: calc($spacing-margin-unit * $i);
+        margin-left: calc($MARGIN_UNIT * $i);
     }
     
     .mr-#{$i} {
-        margin-right: calc($spacing-margin-unit * $i);
+        margin-right: calc($MARGIN_UNIT * $i);
     }
     
     .my-#{$i} {
-        margin-top: calc($spacing-margin-unit * $i);
-        margin-bottom: calc($spacing-margin-unit * $i);
+        margin-top: calc($MARGIN_UNIT * $i);
+        margin-bottom: calc($MARGIN_UNIT * $i);
     }
     
     .mx-#{$i} {
-        margin-left: calc($spacing-margin-unit * $i);
-        margin-right: calc($spacing-margin-unit * $i);
+        margin-left: calc($MARGIN_UNIT * $i);
+        margin-right: calc($MARGIN_UNIT * $i);
     }
 }
 

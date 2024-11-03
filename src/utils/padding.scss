@@ -1,33 +1,35 @@
 @import "../config.scss";
 
+$PADDNIG_UNIT: $spacing-padding-unit;
+
 @for $i from 1 through 3 {
     .p-#{$i} {
-        padding: calc($spacing-padding-unit * $i);
+        padding: calc($PADDING_UNIT * $i);
     }
     
     .pt-#{$i} {
-        padding-top: calc($spacing-padding-unit * $i);
+        padding-top: calc($PADDING_UNIT * $i);
     }
     
     .pb-#{$i} {
-        padding-bottom: calc($spacing-padding-unit * $i);
+        padding-bottom: calc($PADDING_UNIT * $i);
     }
     
     .pl-#{$i} {
-        padding-left: calc($spacing-padding-unit * $i);
+        padding-left: calc($PADDING_UNIT * $i);
     }
     
     .pr-#{$i} {
-        padding-right: calc($spacing-padding-unit * $i);
+        padding-right: calc($PADDING_UNIT * $i);
     }
     
     .py-#{$i} {
-        padding-top: calc($spacing-padding-unit * $i);
-        padding-bottom: calc($spacing-padding-unit * $i);
+        padding-top: calc($PADDING_UNIT * $i);
+        padding-bottom: calc($PADDING_UNIT * $i);
     }
     
     .px-#{$i} {
-        padding-left: calc($spacing-padding-unit * $i);
-        padding-right: calc($spacing-padding-unit * $i);
+        padding-left: calc($PADDING_UNIT * $i);
+        padding-right: calc($PADDING_UNIT * $i);
     }
 }
